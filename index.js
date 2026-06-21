@@ -83,7 +83,7 @@ function showNames(group) {
   //$app.appendChild($back);
 }
 
-function showId($own, item, group) {
+async function showId($own, item, group) {
   const id = item.id;
   const txtPath = `./data/${group.dir}/${id}/${id}.txt`;
   const mp3Path = `./data/${group.dir}/${id}/${id}.mp3`;
@@ -108,36 +108,19 @@ function showId($own, item, group) {
   $detail.className = "detail";
 
   // Midi
-  let audio = null;
-  fetch(mp3Path, { method: 'HEAD' })
-    .then(response => {
-      if (response.ok) {
-        audio = new Audio();
-        audio.className = "midi";
-        audio.controls = true;
-        audio.preload = "none";
-        audio.src = mp3Path;
-
-        $detail.append(audio);
-      }
-    })
-    .catch(error => {
-      console.error('ERROR:', error);
-    });
+  const audio = await getAudio(mp3Path);
+  if (audio !== null) {
+    $detail.append(audio);
+  }
 
   // Text
-  $text = document.createElement("pre");
-  $text.className = "p4chords";
-  fetch(txtPath)
-    .then(response => response.text())
-    .then(text => {
-      $text.textContent = text;
-
-      $detail.append($text);
-    })
-    .catch(error => {
-      console.error('ERROR:', error);
-    });
+  const text = await getText(txtPath);
+  if (text !== null) {
+    $text = document.createElement("pre");
+    $text.className = "p4chords";
+    $text.textContent = text;
+    $detail.append($text);
+  }
 
   $own.insertAdjacentElement("afterend", $detail);
 
@@ -153,6 +136,35 @@ function showId($own, item, group) {
       });
     });
   });
+}
+
+async function getText(url) {
+  try {
+    const response = await fetch(url);
+    return await response.text();
+  } catch (error) {
+    console.error('ERROR:', error);
+    return null;
+  }
+}
+
+async function getAudio(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+
+    if (response.ok) {
+      const audio = new Audio();
+      audio.className = "midi";
+      audio.controls = true;
+      audio.preload = "none";
+      audio.src = url;
+      return audio;
+    }
+    return null;
+  } catch (error) {
+    console.error('ERROR:', error);
+    return null;
+  }
 }
 
 showTitle();
