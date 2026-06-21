@@ -1,0 +1,14 @@
+ダイアトニックコードのコード進行 Diatonic Chord Progressions
+
+例: ビートルズ「Let it be」
+I -> V -> VIm -> IV
+C -> G -> Am  -> F
+
+
+I        トニック
+IIm      サブドミナント
+IIIm     トニック / ドミナント
+IV       サブドミナント
+V        ドミナント
+VIm      トニック
+VIIm-5   ドミナント

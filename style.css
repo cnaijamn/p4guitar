@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+}
+
+#head {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#tail {
+  margin: 0 0 0 0;
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.item {
+  background-color: #000;
+  margin: 0 0 3px 0;
+  padding: 3px;
+  color: #fff;
+  font-size: 1.0em;
+  font-family: monospace;
+  cursor: pointer;
+}
+.item:hover {
+  color: blue;
+}
+
+hr {
+  border: none;
+  background-color: #000;
+  height: 1px;
+}
+
+.back {
+  margin: 4px 0 0 0;
+  color: red;
+  cursor: pointer;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.midi {
+  padding: 0 5px 0 5px;
+}
+
+.p4chords {
+  background-color: #000;
+  margin: 2px 5px 4px 5px;
+  padding: 10px 10px 10px 10px;
+  color: #fff;
+  font-size: 0.9em;
+}
