@@ -26,7 +26,8 @@ body {
   cursor: pointer;
 }
 .item:hover {
-  color: blue;
+  /*color: blue;*/
+  color: #5dc2ff;
 }
 
 hr {
