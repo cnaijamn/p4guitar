@@ -25,10 +25,11 @@ body {
   font-family: monospace;
   cursor: pointer;
 }
+/*
 .item:hover {
-  /*color: blue;*/
-  color: #5dc2ff;
+  color: blue;
 }
+*/
 
 hr {
   border: none;
