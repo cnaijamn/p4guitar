@@ -117,7 +117,7 @@ async function showId($own, item, group) {
   const text = await getText(txtPath);
   if (text !== null) {
     $text = document.createElement("pre");
-    $text.className = "p4chords";
+    $text.className = "p4guitar";
     $text.textContent = text;
     $detail.append($text);
   }

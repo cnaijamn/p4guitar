@@ -53,10 +53,11 @@ hr {
   padding: 0 5px 0 5px;
 }
 
-.p4chords {
+.p4guitar {
   background-color: #000;
   margin: 2px 5px 4px 5px;
   padding: 10px 10px 10px 10px;
   color: #fff;
+  line-height: 1.1em;
   font-size: 0.9em;
 }
