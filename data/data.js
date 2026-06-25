@@ -71,4 +71,12 @@ const DATA = [
       { id: '03_diatonic_chord_progressions', name: 'Diatonic Chord Progressions' },
     ]
   },
+  {
+    dir:   'non-diatonic',
+    title: 'Non-Diatonic Chords',
+    list: [
+      { id: '01_non-diatonic_sample1', name: 'Non-Diatonic Sample 1' },
+//TODO
+    ]
+  },
 ];
