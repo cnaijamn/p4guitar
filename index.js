@@ -21,7 +21,14 @@ function displayHead(name) {
   $app.appendChild($div);
 }
 
+window.addEventListener('popstate', (e) => {
+  console.log('###', location.pathname);
+  showTitle();
+});
+
 function showTitle() {
+  history.pushState({}, '', `./`);
+  //console.log('###', location.pathname);
   displayHead();
 
   DATA.forEach((group) => {
@@ -36,6 +43,8 @@ function showTitle() {
 }
 
 function showNames(group) {
+  history.pushState({}, '', `./${group.dir}`);
+  //console.log('###', location.pathname);
   displayHead(group.title);
 
   group.list.forEach((item) => {
