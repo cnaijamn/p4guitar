@@ -81,7 +81,7 @@ const DATA = [
   },
 
   {
-    dir:   '__misc__',
+    dir:   'misc',
     title: 'misc',
     list: [
       { id: 'A440_flet', name: 'A440 (pitch standard)' },
