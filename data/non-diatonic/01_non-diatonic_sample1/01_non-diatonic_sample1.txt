@@ -1,5 +1,5 @@
 ノンダイアトニックコードのコード進行
 サンプル1
 
-I -> IIbM7 -> IV -> VIb
-C -> BbM7  -> F  -> AbM7
+I -> bVIIM7 -> IV -> bVI7
+C -> BbM7   -> F  -> AbM7
