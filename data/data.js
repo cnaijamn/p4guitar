@@ -66,8 +66,8 @@ const DATA = [
     dir:   'diatonic',
     title: 'Diatonic Chords',
     list: [
-      { id: '01_diatonic_triads',             name: 'Diatonic Triads' },
-      { id: '02_diatonic_seventh_chords',     name: 'Diatonic Seventh Chords' },
+      { id: '01_diatonic_triads',             name: 'Diatonic Triads'             },
+      { id: '02_diatonic_seventh_chords',     name: 'Diatonic Seventh Chords'     },
       { id: '03_diatonic_chord_progressions', name: 'Diatonic Chord Progressions' },
     ]
   },
@@ -76,6 +76,7 @@ const DATA = [
     title: 'Non-Diatonic Chords',
     list: [
       { id: '01_non-diatonic_sample1', name: 'Non-Diatonic Sample 1' },
+      { id: '02_non-diatonic_C7-F',    name: 'Non-Diatonic C7->F'    },
 //TODO
     ]
   },
